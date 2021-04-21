@@ -1,0 +1,57 @@
+.title{
+  font: "Custom Font";
+  font-weight: bold;
+  font-size: 30px;
+  padding-bottom: 7.5px;
+}
+
+.input-item{
+  --ion-background-color: #ffffff;
+}
+
+.input{
+  font: "Custom Font";
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.basic-button{
+  height: 45px;
+  width: 45px;
+  border-radius: 100%;
+}
+
+.right-margin{
+  margin-right: 5px;
+}
+
+.content{
+  padding-top: 0px;
+  --ion-background-color: #ebebe9;
+}
+
+.list-item{
+  font: "Custom Font";
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  --background: var(--ion-color-light);
+  --border-width: 3.5px;
+  --border-color: var(--ion-color-primary);
+}
+
+.footer-button{
+  text-align: center;
+  font: "Custom Font";
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.footer-toolbar{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

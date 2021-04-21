@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="title">Players {{numberPlayers}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content">
+  <ion-list lines="none">
+    <ion-item *ngFor="let player of players" class="list-item">
+        <ion-label class="right-margin">{{player}}</ion-label>
+        <ion-button (click)="deletePlayer(player)"color="primary" class="basic-button">
+          <ion-icon slot="icon-only" name="trash-outline"></ion-icon>
+        </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-item lines="none" class="input-item">
+    <ion-input placeholder="Introduce a name" [(ngModel)]="inputValue" type="text" class="input right-margin"></ion-input>
+    <ion-button (mousedown)="addPlayer(); $event.preventDefault()" color="primary" class="basic-button right-margin">
+      <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+    </ion-button>
+  </ion-item>
+  <ion-toolbar color="primary" class="footer-toolbar">
+    <ion-button routerLink="/home" routerDirection="back" slot="start" color="light" shape="round" class="footer-button">Cancel</ion-button>
+    <ion-button routerLink="/roles" routerDirection="forward" [class.button-disabled]=buttonDisabled slot="end" color="secondary" shape="round" class="footer-button">Accept</ion-button>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,61 @@
+#container {
+  text-align: center;
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#container strong {
+  font-size: 20px;
+  line-height: 26px;
+}
+
+#container p {
+  font-size: 16px;
+  line-height: 22px;
+
+  color: #8c8c8c;
+
+  margin: 0;
+}
+
+#container a {
+  text-decoration: none;
+}
+
+.bg-class{
+  --background: linear-gradient(180deg, #DB5C01, #F8A73F);
+}
+
+.rounded-button {
+  text-align: center;
+  font: "Custom Font";
+  font-weight: bold;
+  font-size: 30px;
+  width: 260px;
+  height: 60px;
+}
+
+.title {
+  text-align: center;
+  font: "Custom Font";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 70px;
+}
+
+.adjustable-grid{
+  height: 100%;
+
+  #title{
+    padding-top: 100px;
+    height: 57.5%;
+  }
+
+  .button-container{
+    height: 15%;
+  }
+}

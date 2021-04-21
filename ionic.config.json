@@ -1,0 +1,7 @@
+{
+  "name": "werewolfmanager",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

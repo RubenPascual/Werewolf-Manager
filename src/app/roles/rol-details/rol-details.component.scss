@@ -1,0 +1,68 @@
+.title{
+  font: "Custom Font";
+  font-weight: bold;
+  font-size: 30px;
+  padding-bottom: 7.5px;
+}
+
+.right-margin{
+  margin-right: 7px;
+}
+
+.content{
+  padding-top: 0px;
+  --ion-background-color: #ebebe9;
+}
+
+.image {
+  padding: 3.5px;
+}
+
+.image-container{
+  height: 203.5px;
+  width: 203.5px;
+  margin: auto;
+  margin-top: 20px;
+  background-color: var(--ion-color-primary);
+}
+
+.rol-title{
+  font: "Custom Font";
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.rol-type{
+  font: "Custom Font";
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  margin-top: 0px;
+}
+
+.rol-description{
+  font: "Custom Font";
+  font-size: 15px;
+  text-align: justify;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.footer-button{
+  text-align: center;
+  font: "Custom Font";
+  font-weight: bold;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.footer-toolbar{
+  padding-bottom: 2px;
+}

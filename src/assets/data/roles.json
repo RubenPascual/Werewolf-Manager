@@ -1,0 +1,21 @@
+[{
+  "id" : "Werewolf",
+  "description" : "Each night, the Werewolves bite, kill and devour one Victim. The victim can be anyone, including other werewolves. During the day they try to conceal their identity and vile deeds from the Townsfolk.",
+  "instructions": "Select one of the following players to kill",
+  "numPlayers" : 0,
+  "maxPlayers" : 0,
+  "rolType" : "Werewolves",
+  "imageURL" : "assets/img/werewolf.jpg",
+  "targetRoles" : ["Werewolf","Villager"]
+},
+{
+  "id" : "Villager",
+  "description" : "These folks have no abilities other than their own intuition. Each Ordinary Townsperson must analyze the players' behavior to guess who is a Werewolf, and try not to be falsely mistaken for a Werewolf and unduly lynched, hanged and burned.",
+  "instructions": "Select one of the following players to kill",
+  "numPlayers" : 0,
+  "maxPlayers" : 0,
+  "rolType" : "Townsfolk",
+  "imageURL" : "assets/img/villager.jpg",
+  "targetRoles" : ["Werewolf","Villager"]
+
+}]

@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="title">Roles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content">
+  <ion-list lines="none" class="list">
+    <ion-item *ngFor="let rol of roles; let i = index" [ngClass]="(i % 2 == 0) ? 'list-item odd' : 'list-item even'" (click)="showRolDetails(rol)">
+        <ion-label class="right-margin">{{rol.id}}</ion-label>
+        <div class="right-margin">
+          <ion-label>{{rol.numPlayers}}</ion-label>
+        </div>
+        <ion-button (click)="addPlayerToRol($event, rol.id,1);" color="primary" class="basic-button">
+          <ion-icon slot="icon-only" name="add-outline"></ion-icon>
+        </ion-button>
+        <ion-button (click)="addPlayerToRol($event, rol.id,-1);"color="primary" class="basic-button">
+          <ion-icon slot="icon-only" name="remove-outline"></ion-icon>
+        </ion-button>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary" class="footer-toolbar">
+    <ion-button routerLink="/player-creation" routerDirection="back" slot="start" color="light" shape="round" class="footer-button">Cancel</ion-button>
+    <ion-button (click) = "checkRoles()" [class.button-disabled]=buttonDisabled slot="end" color="secondary" shape="round" class="footer-button">Accept</ion-button>
+  </ion-toolbar>
+</ion-footer>

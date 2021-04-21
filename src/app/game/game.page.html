@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="title">Game</ion-title>
+    <ion-button (click)="presentAlert()" slot="end">
+      <ion-icon slot="icon-only" name="save-outline" class="save-icon"></ion-icon>
+    </ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [ngClass]=" endGame ? 'win-content' : 'normal-content'">
+  <div *ngIf="!endGame">
+    <ion-item lines="none">
+      <ion-avatar class="rol-icon">
+        <img [src]= "actualRol.imageURL">
+      </ion-avatar>
+      <h1 class="rol-name">{{actualRol.id}}</h1>
+    </ion-item>
+    <h1 class="info">{{actualRol.instructions}}</h1>
+    <ion-grid>
+      <ion-row>
+        <ion-col *ngFor="let player of targetList">
+          <ion-item lines="none" (click)="selectTarget(player)" [ngClass]="(player === selectedTarget) ? 'grid-item selected' : 'grid-item not-selected'">
+            <p class="center">{{player}}</p>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div *ngIf="endGame">
+    <h1 class="winingMessage">{{winingSide}}</h1>
+    <h2 class="info">The winning players are:</h2>
+    <ion-grid>
+      <ion-row>
+        <ion-col *ngFor="let player of winingList">
+          <ion-item lines="none" class= "grid-item not-selected">
+            <p class="center">{{player}}</p>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar *ngIf="!endGame" class="normal-footer-toolbar">
+    <ion-button (click)="confirmAction()" color="secondary" shape="round" class="footer-button center-button">Accept</ion-button>
+  </ion-toolbar>
+  <ion-toolbar *ngIf="endGame" class="win-footer-toolbar">
+    <ion-button (click)="exitGame()" color="light" slot="start" shape="round" class="footer-button">Exit</ion-button>
+    <ion-button (click)="replayGame()" color="secondary" slot="end" shape="round" class="footer-button">Replay</ion-button>
+  </ion-toolbar>
+</ion-footer>

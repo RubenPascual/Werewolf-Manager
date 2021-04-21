@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="title">Player - Rol</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content">
+  <ion-list lines="none" class="list">
+    <ion-item *ngFor="let player of players; let i = index" [ngClass]="(i % 2 == 0) ? 'list-item odd' : 'list-item even'">
+        <ion-label class="right-margin">{{player}} - {{playersRol[player].id}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary" class="footer-toolbar">
+   <ion-button (click)="startGame()" color="secondary" shape="round" class="footer-button">Accept</ion-button>
+  </ion-toolbar>
+</ion-footer>

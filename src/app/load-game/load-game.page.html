@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="title">Load Game</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content">
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let game of gameList" class="col">
+        <ion-card class="card">
+          <ion-card-header class="card-header">
+            {{game.gameName}}
+          </ion-card-header>
+          <ion-card-content class="card-body">
+            Day: {{game.saveDate}}
+            Players: {{game.numPlayers}}
+            <ion-item lines="none" class="card-item">
+              <ion-button (click)="deleteGame(game)" slot="start" class="card-button">
+                <ion-icon slot="icon-only" name="trash-outline" class="card-icon"></ion-icon>
+              </ion-button>
+              <ion-button (click)="loadGame(game)" slot="end" class="card-button">
+                <ion-icon slot="icon-only" name="download-outline" class="card-icon"></ion-icon>
+              </ion-button>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary" class="footer-toolbar">
+   <ion-button routerLink="/home" routerDirection="back" color="secondary" shape="round" class="footer-button">Return</ion-button>
+  </ion-toolbar>
+</ion-footer>

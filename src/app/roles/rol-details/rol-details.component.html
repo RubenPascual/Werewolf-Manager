@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="title">Rol Description</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content">
+  <div class="image-container">
+    <ion-img [src]= "rol.imageURL" class="image"></ion-img>
+  </div>
+  <h1 class="rol-title">{{rol.id}}</h1>
+  <h2 class="rol-type">[{{rol.rolType}}]</h2>
+  <p class="rol-description">{{rol.description}}</p>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="primary" class="footer-toolbar">
+    <ion-button (click)="dismiss()" color="secondary" shape="round" class="footer-button">Return</ion-button>
+  </ion-toolbar>
+</ion-footer>

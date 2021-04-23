@@ -1,21 +1,55 @@
 [{
   "id" : "Werewolf",
   "description" : "Each night, the Werewolves bite, kill and devour one Victim. The victim can be anyone, including other werewolves. During the day they try to conceal their identity and vile deeds from the Townsfolk.",
-  "instructions": "Select one of the following players to kill",
+  "instructions": ["Select one of the following players to kill"],
   "numPlayers" : 0,
   "maxPlayers" : 0,
+  "action" : "killNight",
   "rolType" : "Werewolves",
   "imageURL" : "assets/img/werewolf.jpg",
-  "targetRoles" : ["Werewolf","Villager"]
+  "targetRoles" : ["Werewolf","Villager","Seer","Witch","Cupid"]
 },
 {
   "id" : "Villager",
   "description" : "These folks have no abilities other than their own intuition. Each Ordinary Townsperson must analyze the players' behavior to guess who is a Werewolf, and try not to be falsely mistaken for a Werewolf and unduly lynched, hanged and burned.",
-  "instructions": "Select one of the following players to kill",
+  "instructions": ["Select one of the following players to kill"],
   "numPlayers" : 0,
   "maxPlayers" : 0,
+  "action" : "killDay",
   "rolType" : "Townsfolk",
   "imageURL" : "assets/img/villager.jpg",
-  "targetRoles" : ["Werewolf","Villager"]
-
+  "targetRoles" : ["Werewolf","Villager","Seer","Witch","Cupid"]
+},
+{
+  "id" : "Seer",
+  "description" : "Each night, the seer can see the role of one player. The seer chooses which player this will be. The seer must help the other Townsfolk to correctly identify the Werewolves, without being discovered out by the Werewolves, thus making him/herself a target.",
+  "instructions": ["Select one of the following players to investigate"],
+  "numPlayers" : 0,
+  "maxPlayers" : 1,
+  "action" : "investigate",
+  "rolType" : "Townsfolk",
+  "imageURL" : "assets/img/seer.jpg",
+  "targetRoles" : ["Werewolf","Villager","Seer","Witch","Cupid"]
+},
+{
+  "id" : "Witch",
+  "description" : "This Townsperson knows how to make two very powerful potions: The first is a healing potion, which can be used to resurrect a player that is killed by a Werewolf. The second is a poison, used during the night to eliminate one player. Each potion can only be used once per game. The Witch can use either potion on him/herself if he/she wishes. If this character is used you can have an evening where either nobody dies or where one player dies or where 2 players die.",
+  "instructions": ["Select one of the following players to revive","Select one of the following players to kill"],
+  "numPlayers" : 0,
+  "maxPlayers" : 1,
+  "action" : "potions",
+  "rolType" : "Townsfolk",
+  "imageURL" : "assets/img/witch.jpg",
+  "targetRoles" : ["Werewolf","Villager","Seer","Witch","Cupid"]
+},
+{
+  "id" : "Cupid",
+  "description" : "“Cupid” is the town matchmaker. He/she received the nickname because of his/her ability to make any two people fall instantly in love. During the first night of the game, Cupid designates two players who will be in “in love” with one another for the rest of the game. Cupid can choose him/herself as one of the lovers. If one of the lovers dies, the other immediately kills him/herself in a fit of grief. A love cannot, even as a bluff, vote to lynch their lover. Special Case: If one of the lovers is a Werewolf and the other one is a Townsperson, the object of the game changes for these two players. The pair’s only wish is to live in love and peace, and therefore must eliminate all other players ",
+  "instructions": ["Select two players to fall in love with each other"],
+  "numPlayers" : 0,
+  "maxPlayers" : 1,
+  "action" : "love",
+  "rolType" : "Townsfolk",
+  "imageURL" : "assets/img/cupid.jpg",
+  "targetRoles" : ["Werewolf","Villager","Seer","Witch","Cupid"]
 }]

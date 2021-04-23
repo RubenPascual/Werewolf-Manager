@@ -10,7 +10,7 @@ import { NativeStorage } from '@ionic-native/native-storage/ngx';
 export class GameService {
 
   private game: Game;
-  private rolOrder = ['Werewolf', 'Villager'];
+  private rolOrder = ['Cupid', 'Werewolf', 'Seer', 'Witch', 'Villager'];
 
   constructor(
     private storage: NativeStorage
@@ -25,14 +25,23 @@ export class GameService {
      *  - players: string[] Array with all the players
      */
 
+    const gameRoles = players.map( player => playersRol[player].id);
+
     this.game = {
       playersRol,
       gameName: '',
       saveDate: '',
       numPlayers: players.length,
+      allPlayers: players,
       alivePlayers: players,
+      nightKilledPlayers: [],
       currentRol: 0,
-      rolOrder: this.rolOrder
+      rolOrder: this.rolOrder.filter( rol => gameRoles.indexOf(rol) > -1),
+      showDeadList: false,
+      lovers: {},
+      loversEnding: false,
+      removableRols: [],
+      whitchPotions: { killNight: 1, heal: 1}
       };
   }
 

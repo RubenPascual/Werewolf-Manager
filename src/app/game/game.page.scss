@@ -9,6 +9,22 @@
   margin: auto;
 }
 
+.segment{
+  margin: auto;
+  width: 200px;
+}
+
+.segment-text{
+  font: "Custom Font";
+  font-size: 15px;
+}
+
+.segment-num{
+  font-size: 20px;
+  font: "Custom Font";
+  margin-bottom: 18px;
+}
+
 .rol-icon{
   margin: auto;
   margin-top: 6px;
@@ -24,11 +40,21 @@
   text-align: center;
 }
 
+.rol-dead-info{
+  margin: auto;
+  font: "Custom Font";
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+}
+
 .info{
   font: "Custom Font";
   font-weight: bold;
   font-size: 18px;
   text-align: center;
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .grid-item{
@@ -97,6 +123,22 @@
 .normal-footer-toolbar{
   padding-bottom: 2px;
   --ion-background-color: #ebebe9;
+}
+
+.witch-footer-toolbar{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  --ion-background-color: #ebebe9;
+}
+
+.witch-button{
+  text-align: center;
+  font: "Custom Font";
+  font-weight: bold;
+  font-size: 20px;
+  width: 150px;
 }
 
 .win-footer-toolbar{

@@ -305,8 +305,6 @@ export class GamePage implements OnInit {
     const werewolves = this.game.alivePlayers.filter(player => this.game.playersRol[player].rolType === 'Werewolves').length;
     const notWerewolves = this.game.alivePlayers.length - werewolves;
 
-    console.log(this.game.loversEnding);
-
     if (this.game.loversEnding && this.game.alivePlayers.every( player => Object.keys(this.game.lovers).indexOf(player) > -1)){
       this.endGame = true;
       this.winingSide = 'Lovers Won';
@@ -325,8 +323,6 @@ export class GamePage implements OnInit {
       this.winingList = this.game.allPlayers.filter(player => {
         const rolType = this.game.playersRol[player].rolType === 'Townsfolk';
         const notLover = Object.keys(this.game.lovers).indexOf(player) === -1;
-        console.log(player);
-        console.log(notLover);
         return rolType && notLover;
       });
     }
